@@ -1,0 +1,59 @@
+th {
+  text-align: center;
+  vertical-align: center;
+}
+
+.list {
+  text-align: center;
+  padding-top: 36px;
+  vertical-align: center;
+}
+
+.stt {
+  text-align: center;
+  padding-top: 32px;
+  vertical-align: center;
+}
+
+.control-of-list {
+  text-align: center;
+  padding-top: 33px;
+  vertical-align: center;
+}
+
+.product-image {
+  text-align: center;
+  vertical-align: center;
+}
+.card:hover {
+  background-color: rgba(33, 229, 243, 0.82);
+  cursor: pointer;
+}
+.container img{
+  height: 200px;
+  width: 250px;
+}
+.card {
+  height: 400px;
+  width: 252px;
+}
+.star{
+  text-align: center;
+}
+video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 780px;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.delete{
+  color: red;
+}

@@ -1,0 +1,50 @@
+<h1>Edit Product</h1>
+<form  [formGroup]="productFormEdit" (ngSubmit)="update()">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <header>
+          <div class="form-group">
+            <div class="form-control edit">
+              <label>Name:</label>
+              <input class="form-control" formControlName="name">
+              <div *ngIf="name.invalid && name.touched">
+                <div *ngIf="name.errors.required">
+                  <p class="error">
+                    <i class="fa fa-exclamation-circle">
+                      Can not be empty!
+                    </i>
+                  </p>
+                </div>
+              </div>
+              <label>Price:</label>
+              <input class="form-control" formControlName="price">
+              <div *ngIf="price.invalid && price.touched">
+                <div *ngIf="price.errors.required">
+                  <p class="error">
+                    <i class="fa fa-exclamation-circle">
+                      Can not be empty!
+                    </i>
+                  </p>
+                </div>
+              </div>
+              <label>Star:</label>
+              <input class="form-control" formControlName="star">
+              <div *ngIf="star.invalid && star.touched">
+                <div *ngIf="star.errors.required">
+                  <p class="error">
+                    <i class="fa fa-exclamation-circle">
+                      Can not be empty!
+                    </i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" [disabled]="!productFormEdit.valid">Update</button>
+          <button class="btn btn-black" routerLink="/products">Cancel</button>
+        </header>
+      </div>
+    </div>
+  </div>
+</form>

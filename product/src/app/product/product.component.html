@@ -1,0 +1,40 @@
+<app-menu (product)="searchProduct($event)"></app-menu>
+<form>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <button class="btn btn-primary" routerLink="/products/create">Create</button>
+      </div>
+      <div class="col-6"></div>
+    </div>
+  </div>
+  <div class="container">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <div class="row">
+      <div class="col-3" *ngFor="let product of productList | paginate: { itemsPerPage: 4, currentPage: p }">
+        <div class="card">
+          <img class="card-img-top" src="../../assets/ProductImage/olym.jpg"
+               height="195" width="259" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">{{product.price}} VNĐ</p>
+            <p class="star">
+              <app-star [stars]="product.star"></app-star>
+            </p>
+            <button class="btn btn-primary" [routerLink]="['/products', product.id, 'edit']">
+              Edit <i class="fa fa-edit"></i>
+            </button>
+            <button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete <i class="fa fa-trash "></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</form>
+<video autoplay="autoplay" muted="muted" loop="loop" >
+  <source
+    src="https://content.rolex.com/dam/about-rolex-watches/hub/video/about-rolex-watches-cover.mp4"
+    type="video/mp4" >
+</video>
